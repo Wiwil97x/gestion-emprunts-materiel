@@ -1,0 +1,96 @@
+// 🎨 Palette de couleurs
+$primary-color: #1e8449; // Vert principal
+$secondary-color: #145a32; // Vert foncé pour contraste
+$background-color: #f8f9fa; // Fond clair
+$text-color: #2c3e50; // Texte principal plus lisible
+$success-color: #28a745; // Vert validation
+$error-color: #dc3545; // Rouge erreur
+$button-hover: #1db05a;
+$border-radius: 10px; // Arrondi pour les boutons et cards
+$container-width: 1000px; // Largeur uniforme du contenu
+
+// 🖋️ Typographie
+$font-family: "Arial", sans-serif;
+
+// 📐 Ombres
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// $primary-color: #1f1f1f; // Noir/gris très foncé
+// $secondary-color: #292929; // Gris foncé
+// $background-color: #121212; // Fond totalement noir
+// $text-color: #e0e0e0; // Texte clair pour contraste
+// $success-color: #27ae60; // Vert émeraude
+// $error-color: #e74c3c; // Rouge foncé
+// $button-hover: #333333; // Gris foncé pour effet hover
+
+// $primary-color: #007bff; // Bleu vif (Principal)
+// $secondary-color: #0056b3; // Bleu foncé (Contraste)
+// $background-color: #f8f9fa; // Fond clair
+// $text-color: #212529; // Texte foncé pour contraste
+// $success-color: #28a745; // Vert succès
+// $error-color: #dc3545; // Rouge erreur
+// $button-hover: #0056b3; // Bleu foncé pour effet hover
+
+// $primary-color: #ffafcc; // Rose pastel
+// $secondary-color: #ffc8dd; // Rose clair
+// $background-color: #f8edeb; // Beige pastel
+// $text-color: #3d405b; // Gris foncé pour contraste
+// $success-color: #a2d2ff; // Bleu doux
+// $error-color: #ff758f; // Rose vif
+// $button-hover: #bde0fe; // Bleu clair effet hover
+
+// $primary-color: #ff00ff; // Magenta néon
+// $secondary-color: #00ffff; // Cyan néon
+// $background-color: #0d0d0d; // Noir profond
+// $text-color: #000000; // Blanc pur
+// $success-color: #0aff99; // Vert néon
+// $error-color: #ff073a; // Rouge néon
+// $button-hover: #8a2be2; // Violet profond
+
+// $primary-color: #d35400; // Orange terre cuite
+// $secondary-color: #8e44ad; // Violet profond
+// $background-color: #f5ebe0; // Beige doux
+// $text-color: #4b2c20; // Brun chocolat
+// $success-color: #16a085; // Vert forêt
+// $error-color: #c0392b; // Rouge brique
+// $button-hover: #e67e22; // Orange chaud
+
+// $primary-color: #0077b6; // Bleu profond
+// $secondary-color: #00b4d8; // Turquoise
+// $background-color: #caf0f8; // Bleu clair
+// $text-color: #023e8a; // Bleu marine
+// $success-color: #52b788; // Vert menthe
+// $error-color: #d00000; // Rouge corail
+// $button-hover: #0096c7; // Bleu ciel hover
+
+// $primary-color: #6200ea; // Violet Google Material
+// $secondary-color: #03dac6; // Turquoise Material
+// $background-color: #f5f5f5; // Gris clair moderne
+// $text-color: #1c1c1c; // Noir foncé pour contraste
+// $success-color: #00c853; // Vert Google
+// $error-color: #d50000; // Rouge Google
+// $button-hover: #3700b3; // Violet foncé hover
+
+// $primary-color: #000000; // Noir profond
+// $secondary-color: #444444; // Gris foncé
+// $background-color: #ffffff; // Blanc pur
+// $text-color: #000000; // Noir pour contraste
+// $success-color: #27ae60; // Vert sobre
+// $error-color: #e74c3c; // Rouge sobre
+// $button-hover: #222222; // Gris foncé hover
+
+// $primary-color: #ff7f50; // Corail vintage
+// $secondary-color: #008080; // Bleu canard
+// $background-color: #fdf5e6; // Beige doux
+// $text-color: #5c4033; // Marron chocolat
+// $success-color: #90ee90; // Vert pastel
+// $error-color: #ff4500; // Orange foncé
+// $button-hover: #cd5c5c; // Rouge doux hover
+
+// $primary-color: #b8860b; // Or vieilli
+// $secondary-color: #8b0000; // Rouge bordeaux
+// $background-color: #1c1c1c; // Noir profond
+// $text-color: #000000; // Blanc doré
+// $success-color: #ffd700; // Or brillant
+// $error-color: #ff4500; // Rouge feu
+// $button-hover: #daa520; // Or intense hover

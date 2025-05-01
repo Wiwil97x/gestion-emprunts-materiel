@@ -1,0 +1,322 @@
+@import "./setting.scss"; // Import des variables globales
+
+/* ========================================================================== 
+   🔄 1. RÉINITIALISATION GLOBALE 
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================================================== 
+   🎨 2. STYLES GÉNÉRAUX DU BODY & CONTAINER
+   ========================================================================== */
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: $container-width;
+  max-width: 100%;
+  padding: 20px;
+  background: white;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  text-align: center;
+}
+
+/* ========================================================================== 
+   📌 3. NAVIGATION (BARRE DE MENU)
+   ========================================================================== */
+nav {
+  background: $primary-color;
+  padding: 20px;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  margin-bottom: 20px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      display: inline;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: $border-radius;
+
+        &:hover {
+          background: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+}
+
+/* ========================================================================== 
+   📝 4. FORMULAIRES & CHAMPS DE SAISIE
+   ========================================================================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  text-align: left;
+
+  input,
+  select {
+    padding: 10px;
+    border: 1px solid $secondary-color;
+    border-radius: $border-radius;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: $border-radius;
+    background: $primary-color;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background: $button-hover;
+    }
+  }
+}
+
+/* ========================================================================== 
+   ✅ 5. MESSAGES (SUCCESS & ERREUR)
+   ========================================================================== */
+.message {
+  padding: 15px;
+  border-radius: $border-radius;
+  font-weight: bold;
+  text-align: center;
+
+  &.success {
+    background: lighten($success-color, 30%);
+    color: $success-color;
+  }
+
+  &.error {
+    background: lighten($error-color, 30%);
+    color: $error-color;
+  }
+}
+
+/* ========================================================================== 
+   📋 6. LISTE DES EMPRUNTS (TABLEAU & CARTES)
+   ========================================================================== */
+.list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    background: white;
+    margin-bottom: 10px;
+    border-left: 5px solid $primary-color;
+
+    // En-tête de l'emprunt (titre + utilisateur)
+    .emprunt-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      color: $primary-color;
+      margin-bottom: 5px;
+    }
+
+    // Détails de l'emprunt
+    .emprunt-details {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px 30px;
+      font-size: 14px;
+
+      span {
+        display: flex;
+        align-items: center;
+      }
+
+      strong {
+        color: $text-color;
+      }
+    }
+  }
+}
+
+// 📌 Dates d'emprunt et de retour
+.dates {
+  font-size: 12px;
+  color: gray;
+  margin-top: 3px;
+  display: block;
+}
+
+/* ========================================================================== 
+   🔄 7. BOUTON DE RETOUR D'EMPRUNT
+   ========================================================================== */
+.btn-retour {
+  background: none;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  padding: 5px 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $primary-color;
+    color: white;
+  }
+}
+
+/* ========================================================================== 
+   🔽 8. PAGINATION (STYLISATION)
+   ========================================================================== */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* ✅ Espacement ajouté */
+  margin-top: 20px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+
+  li {
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background: white;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    transition: 0.3s;
+
+    &:hover {
+      background: $primary-color;
+      color: white;
+    }
+  }
+
+  .selected {
+    background: $primary-color;
+    color: white;
+  }
+
+  .prev-page,
+  .next-page {
+    font-weight: bold;
+  }
+
+  .pagination-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+/* ✅ Style amélioré du sélecteur du nombre d'éléments */
+.pagination-container select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  background: white;
+  color: $primary-color;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: $primary-color;
+    color: white;
+  }
+}
+
+/* ========================================================================== 
+   📊 9. TABLEAU DES EMPRUNTS
+   ========================================================================== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background: $primary-color;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+
+  tr:hover {
+    background: lighten($primary-color, 40%);
+  }
+}
+
+/* ========================================================================== 
+   🔎 10. FILTRES & CHAMPS DE RECHERCHE
+   ========================================================================== */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* ✅ Espacement amélioré */
+  margin-top: 20px; /* ✅ Espacement ajouté */
+  margin-bottom: 20px; /* ✅ Espacement ajouté */
+}
+
+.search-bar,
+.filter-select,
+.date-filter {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* ✅ Ajout d'icônes pour afficher clairement le statut */
+.statut-en-cours {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.statut-rendu {
+  color: #28a745;
+  font-weight: bold;
+}
